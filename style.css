@@ -9,8 +9,8 @@
 :root {
   --font-family: Poppins, sans-serif;
   --bg-stale-50: #f8fafc;
-  --bg-cyan-700: #0e7490;
-  --bg-blue-700: #1e40af;
+  --bg-purple-700: #7e22ce;
+  --bg-pink-600: #c026d3;
   --bg-red-700: #b91c1c;
   --bg-blue-800: #1d4ed8;
   --bg-neutral-950: #0a0a0a;
@@ -20,11 +20,58 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
-  background: linear-gradient(120deg, var(--bg-cyan-700), var(--bg-blue-800));
+  background: linear-gradient(120deg, var(--bg-purple-700), var(--bg-pink-600));
 }
 
 dialog {
-  margin: 300px auto;
+  margin: 200px auto;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--bg-stale-50);
+}
+
+form {
+  display: grid;
+  gap: .5rem;
+  padding: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: .2rem;
+  height: 2rem;
+  padding-left: .5rem;
+}
+
+.start-game-btn {
+  font-weight: bold;
+  height: 2rem;
+  border: none;
+  margin-top: .5rem;
+  border-radius: .5rem;
+  background-color: var(--bg-neutral-950);
+  color: var(--bg-stale-50);
+}
+
+.new-game-btn {
+  font-weight: bold;
+  height: 2rem;
+  width: 6rem;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--bg-neutral-950);
+  color: var(--bg-stale-50);
+}
+
+.result {
+  display: none;
+  gap: 1.5rem;
+  place-items: center;
 }
 
 main {
@@ -59,7 +106,7 @@ main {
   color: var(--bg-blue-700);
 }
 
-.restart-button {
+.restart-game-btn {
   border: none;
   border-radius: .5rem;
   height: 2rem;
