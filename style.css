@@ -1,0 +1,70 @@
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+:root {
+  --font-family: Poppins, sans-serif;
+  --bg-stale-50: #f8fafc;
+  --bg-cyan-700: #0e7490;
+  --bg-blue-700: #1e40af;
+  --bg-red-700: #b91c1c;
+  --bg-blue-800: #1d4ed8;
+  --bg-neutral-950: #0a0a0a;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, var(--bg-cyan-700), var(--bg-blue-800));
+}
+
+dialog {
+  margin: 300px auto;
+}
+
+main {
+  display: none;
+  gap: 1.5rem;
+  place-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: .5rem;
+}
+
+.cell {
+  height: 7rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--bg-stale-50);
+  font-size: 5rem;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+}
+
+.circle {
+  color: var(--bg-red-700);
+}
+
+.cross {
+  color: var(--bg-blue-700);
+}
+
+.restart-button {
+  border: none;
+  border-radius: .5rem;
+  height: 2rem;
+  width: 9rem;
+  font-weight: bold;
+  color: var(--bg-stale-50);
+  background-color: var(--bg-neutral-950);
+}
